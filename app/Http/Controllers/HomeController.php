@@ -34,9 +34,21 @@ class HomeController extends Controller
 //        return view('home');
 
         //student
-        session(['Daniela'=>'student']);
+//        session(['Daniela'=>'student']);
 
+        //delete one
+//        $request->session()->forget('daniela');
+//
+//        Delete all
+        $request->session()->flush();
+
+//        Show all
         return $request->session()->all();
+
+        //student 2
+//        session(['daniela'=>'a student']);
+//
+//        return session('daniela');
 
     }
 }
