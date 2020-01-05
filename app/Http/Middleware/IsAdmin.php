@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class isAdmin
 {
@@ -18,10 +19,10 @@ class isAdmin
 
         $user = Auth::user();
 
-        if($user->isAdmin()){
+        if(!$user->isAdmin()){
 
 //            echo "This user is admin";
-            return redirect()->intended('/admin');
+            return redirect()->intended('/home');
 
         }
 
