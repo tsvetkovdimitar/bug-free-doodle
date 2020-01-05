@@ -15,6 +15,16 @@ class isAdmin
      */
     public function handle($request, Closure $next)
     {
+
+        $user = Auth::user();
+
+        if($user->isAdmin()){
+
+//            echo "This user is admin";
+            return redirect()->intended('/admin');
+
+        }
+
         return $next($request);
     }
 }
