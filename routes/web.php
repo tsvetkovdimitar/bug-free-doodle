@@ -12,7 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    return view('welcome');
+
+    $user = Auth::user();
+
+    if($user->isAdmin()){
+
+        echo "This user is admin";
+
+    }
+
 });
 
 //Checking if copy to /var/www/html works
