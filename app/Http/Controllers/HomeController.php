@@ -40,15 +40,25 @@ class HomeController extends Controller
 //        $request->session()->forget('daniela');
 //
 //        Delete all
-        $request->session()->flush();
+//        $request->session()->flush();
 
 //        Show all
-        return $request->session()->all();
+//        return $request->session()->all();
 
         //student 2
 //        session(['daniela'=>'a student']);
 //
 //        return session('daniela');
+
+//        Flashing
+//        $request->session()->flash('message', 'Post has been created');
+//
+//        return $request->session()->get('message');
+
+//        Keep data a bit longer
+//        $request->session()->reflash();
+//
+//        $request->session()->keep('message');
 
     }
 }
